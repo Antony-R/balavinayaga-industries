@@ -22,3 +22,9 @@ p {
     margin: 0;
 }
 
+@media (max-width: 500px) {
+    .carousel-item img{
+        object-fit: cover;
+        height: 65vh;
+    }
+}

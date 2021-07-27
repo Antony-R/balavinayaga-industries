@@ -55,7 +55,7 @@
     border: 10px;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 770px) {
     .navbar-toggle-btn{
         display: flex;
     }
