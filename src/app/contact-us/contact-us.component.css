@@ -1,0 +1,20 @@
+p {
+    font-family: 'Lexend', sans-serif;
+    font-size: 1em;
+}
+
+i{
+    font-size: 30px;
+}
+
+.h1 {
+    font-family: 'Provicali', sans-serif;
+    width: fit-content;
+    padding: 5px 10px 5px 10px;
+}
+
+.footer{
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0;
+}

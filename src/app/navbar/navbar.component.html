@@ -1,0 +1,24 @@
+<nav class="bg-primary">
+  <div class="flexbox-container">
+    <div>
+      <a class="navbar-brand" routerLink='' id="brand-name">
+        <img src="./assets/brand-logo-svg.svg" id="img" alt="Logo" width="50" height="44"
+          class="d-inline-block img-thumbnail">
+        BALAVINAYAGA INDUSTRIES
+      </a>
+    </div>
+    <a class="navbar-toggle-btn" (click)="toggle()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navbar-flex-links" [class.active]="hamburger">
+      <ul>
+        <li><a routerLink=''>Home</a></li>
+        <li> <a routerLink='/gallery'>Gallery</a></li>
+        <li> <a routerLink='/services'>Services</a></li>
+        <li><a routerLink='/contact-us'>Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

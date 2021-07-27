@@ -1,0 +1,24 @@
+p {
+    font-family: 'Lexend', sans-serif;
+    font-size: 1.2em;
+}
+
+.h1 {
+    font-family: 'Provicali', sans-serif;
+    width: fit-content;
+    padding: 5px 10px 5px 10px;
+}
+
+.carousel-item img {
+    object-fit: fill;
+    object-position: center;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.footer{
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0;
+}
+

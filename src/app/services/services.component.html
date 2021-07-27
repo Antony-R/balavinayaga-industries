@@ -1,0 +1,41 @@
+<div class="container my-3">
+    <div class="btn-group d-flex justify-content-center custom-font" data-toggle="buttons">
+        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
+        <label class="btn btn-outline-danger" for="option1" (click)="laserCutting()">CNC LASER WORKS</label>
+        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+        <label class="btn btn-outline-danger" for="option2" (click)="shearing()">SHEARING</label>
+        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+        <label class="btn btn-outline-danger" for="option3" (click)="folding()">FOLDING</label>
+        <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+        <label class="btn btn-outline-danger" for="option4" (click)="powerPress()">POWER PRESS</label>
+    </div>
+    <div class="col-12 d-flex justify-content-between my-3 img-flex" *ngIf="laser">
+        <img src="./assets/laser-1.jpeg" class="img-fluid rounded responsive" alt="Laser 1">
+        <img src="./assets/laser-2.jpeg" class="img-fluid rounded responsive" alt="Laser 2">
+        <img src="./assets/laser-3.jpeg" class="img-fluid rounded responsive" alt="Laser 3">
+    </div>
+    <div class="col-12 d-flex justify-content-between my-3 img-flex" *ngIf="shear">
+        <img src="./assets/shear-1.jpg" class="img-fluid rounded responsive" alt="Shear 1">
+        <img src="./assets/shear-2.jpg" class="img-fluid rounded responsive" alt="Shear 2">
+        <img src="./assets/shear-3.jpeg" class="img-fluid rounded responsive" alt="Shear 3">
+    </div>
+    <div class="col-12 d-flex justify-content-between my-3 img-flex" *ngIf="fold">
+        <img src="./assets/fold-1.jpeg" class="img-fluid rounded responsive" alt="Fold 1">
+        <img src="./assets/fold-2.jpeg" class="img-fluid rounded responsive" alt="Fold 2">
+        <img src="./assets/fold-3.jpeg" class="img-fluid rounded responsive" alt="Fold 3">
+    </div>
+    <div class="col-12 d-flex justify-content-between my-3 img-flex" *ngIf="power">
+        <img src="./assets/power-press-1.jpeg" class="img-fluid rounded responsive" alt="Power 1">
+        <img src="./assets/power-press-2.jpeg" class="img-fluid rounded responsive" alt="Power 2">
+        <img src="./assets/power-press-3.jpeg" class="img-fluid rounded responsive" alt="Power 3">
+    </div>
+    <div class="col-12 d-flex justify-content-center my-3 gotham">
+        <ul class="list-group">
+            <li class="list-group-item active">{{heading}}</li>
+            <li class="list-group-item" *ngFor="let point of points">{{point}}</li>
+        </ul>
+    </div>
+    <div class="alert alert-primary gotham" role="alert">
+        {{undertake}}
+    </div>
+</div>

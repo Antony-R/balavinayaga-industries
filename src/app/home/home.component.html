@@ -1,0 +1,70 @@
+<div class="row">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./assets/home-1.JPG" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/home-2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="/assets/home-3.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="/assets/home-4.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="/assets/home-5.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="container ms-2 mt-4">
+        <h1 class="h1 border border-3 border-primary rounded">About Us</h1>
+        <p>{{text}}</p>
+    </div>
+    <div class="container ms-2">
+        <h1 class="h1 border border-3 border-primary rounded">Nature of business</h1>
+        <p>Sheet Metal Fabrication Works</p>
+        <h1 class="h1 border border-3 border-primary rounded">Year of establishment</h1>
+        <p>2007</p>
+    </div>
+    <div class="container d-flex justify-content-between ms-2">
+        <div>
+            <h1 class="h1 border border-3 border-primary rounded">Our Customers</h1>
+            <p *ngFor="let line of customers">{{line}}</p>
+        </div>
+        <div class="d-flex justify-content-center flex-grow-1 align-items-center">
+            <img src="./assets/iso.jpeg" class="rounded-circle" width="200" height="200" alt="ISO">
+        </div>
+    </div>
+</div>
+<div class="alert alert-light d-flex justify-content-between footer">
+    <div>
+        <p><i class="fas fa-copyright"></i> Copyrights Reserved, 2021</p>
+    </div>
+    <div>
+        <p><i class="far fa-paper-plane"></i> Made by r.antony67@gmail.com</p>
+    </div>
+</div>

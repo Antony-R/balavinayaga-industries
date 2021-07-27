@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+@font-face {
+    font-family: 'Metropolis';
+    src: url("./assets/Metropolis-Bold.otf");
+}
+
+@font-face {
+    font-family: 'Metropolis-Reg';
+    src: url("./assets/Metropolis-Regular.otf");
+}
+
+@font-face {
+    font-family: 'Louis';
+    src: url("./assets/Louis-George-Cafe-Reg.ttf");
+}
+
+@font-face {
+    font-family: 'Provicali';
+    src: url("./assets/Provicali.otf");
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url("./assets/Gotham-Light-Regular.otf");
+}
+
+
+
+body, html{
+    margin: 0;
+    padding: 0;
+    overflow-x:hidden;
+}
