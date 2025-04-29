@@ -1,3 +1,5 @@
+/* home.component.css */
+/* Your original CSS */
 p {
     font-family: 'Lexend', sans-serif;
     font-size: 1.2em;
@@ -16,6 +18,24 @@ p {
     overflow: hidden;
 }
 
+/* Add this CSS to your stylesheet */
+/* Add this CSS to your stylesheet */
+.instagram-icon {
+    vertical-align: middle; /* Align icon vertically with the text */
+    margin-right: 5px; /* Add some spacing between the icon and the link */
+    font-size: 1.2em !important; /* Reduced icon size */
+}
+
+.instagram-link {
+    color: #000; /* Set link color */
+    text-decoration: none; /* Remove underline */
+    vertical-align: middle; /* Align link vertically with the icon */
+}
+
+.instagram-link:hover {
+    text-decoration: underline; /* Add underline on hover for better UX */
+}
+
 .footer{
     font-size: 0.8em;
     padding: 0;
@@ -27,4 +47,227 @@ p {
         object-fit: cover;
         height: 65vh;
     }
+}
+
+/* New utility class */
+.object-fit-cover {
+    object-fit: cover;
+    height: 55vh; /* Adjust as needed */
+}
+
+/* Image adjustments for a more professional look */
+.brightness-75 {
+    filter: brightness(75%);
+}
+
+.contrast-125 {
+    filter: contrast(125%);
+}
+
+/* New Font Styles */
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+h1 { font-size: 2.75rem; font-weight: 700; }
+h2 { font-size: 2.2rem; font-weight: 600; }
+h3 { font-size: 1.75rem; font-weight: 600; }
+h4 { font-size: 1.5rem; font-weight: 600; }
+h5 { font-size: 1.25rem; font-weight: 600; }
+
+/* Creative Card Styling with Animated Subtle Background Hover (Whitish) */
+.card-interactive {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%); /* Very light gray/whitish gradient */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-position 0.6s ease-out, border-bottom-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Keep color transition */
+    background-size: 200% 200%;
+    background-position: 90% 0;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    color: #555; /* Default text color - slightly darker gray */
+    outline: none; /* Remove default focus outline */
+}
+
+.card-interactive:hover,
+.card-interactive:focus { /* Apply focus ring on both hover and focus */
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15), 0 0 0 0.2rem rgba(128, 55, 55, 0.5); /* Oxide Red focus ring */
+    background-position: 0 0;
+    border-bottom-color: #803737 !important; /* Oxide Red for hover border */
+    color: #333; /* Darker text on hover */
+}
+
+.card-interactive .card-body {
+    padding: 1.5rem;
+}
+
+.card-interactive .card-body i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #803737 !important; /* Oxide Red for icons */
+    transition: color 0.3s ease-in-out;
+}
+
+.card-interactive .card-body h3 {
+    color: #333; /* Dark text by default, overridden by oxide-red-text */
+    margin-bottom: 0.75rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.card-interactive:hover .card-body h3,
+.card-interactive:focus .card-body h3 {
+    color: #662828 !important; /* Darker Oxide Red on hover/focus */
+}
+
+.card-interactive .text-info {
+    color: #17a2b8 !important; /* Standard info blue */
+}
+
+.card-interactive .text-success {
+    color: #28a745 !important; /* Standard success green */
+}
+
+.card-interactive .text-secondary {
+    color: #6c757d !important; /* Standard secondary gray */
+}
+
+.card-interactive .text-muted {
+    color: #868e96 !important; /* Standard muted gray */
+}
+
+.card-interactive .text-primary {
+    color: #007bff !important; /* Standard primary blue - will be overridden */
+}
+
+.card-interactive:hover .card-body.d-flex.align-items-start i.text-primary,
+.card-interactive:focus .card-body.d-flex.align-items-start i.text-primary {
+    color: #333 !important;
+}
+
+
+.card-interactive:hover .text-info,
+.card-interactive:hover .text-success,
+.card-interactive:hover .text-secondary,
+.card-interactive:hover .text-muted,
+.card-interactive:hover .text-primary,
+.card-interactive:focus .text-info,
+.card-interactive:focus .text-success,
+.card-interactive:focus .text-secondary,
+.card-interactive:focus .text-muted,
+.card-interactive:focus .text-primary {
+    color: #333 !important; /* Darker text on hover/focus */
+}
+
+.card-interactive .card-body ul {
+    padding-left: 1rem;
+}
+
+.card-interactive .card-body ul li {
+    margin-bottom: 0.25rem;
+    display: flex;
+    align-items: center;
+    line-height: 1.5em; /* Adjust the value as needed */
+}
+
+.card-interactive .card-body ul li i.text-muted {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    color: #868e96 !important;
+    flex-shrink: 0;
+    line-height: 1em; /* Adjust the value as needed */
+}
+
+/* Style for the ISO image card */
+.card-interactive .card-body.d-flex.flex-column.align-items-center.justify-content-center i.text-primary {
+    color: #803737 !important; /* Oxide Red for ISO icon */
+}
+
+/* Style for the Clients card */
+.card-interactive .card-body.d-flex.align-items-start i.text-primary {
+    color: #803737 !important; /* Oxide Red for clients icon */
+}
+
+/* home.component.css */
+/* ... other CSS ... */
+
+.carousel-caption h3.fw-bold.text-white {
+    position: relative; /* Needed for pseudo-element positioning */
+    z-index: 2; /* Ensure text is above the pseudo-element */
+}
+
+.carousel-caption h3.fw-bold.text-white::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent dark backdrop */
+    border-radius: 0.2rem; /* Optional: slight rounding */
+    padding: 0.1rem 0.2rem; /* Adjust to fit text size */
+    z-index: -1; /* Place behind the text */
+}
+
+.carousel-caption p.text-light {
+    position: relative; /* Needed for pseudo-element positioning */
+    z-index: 2; /* Ensure text is above the pseudo-element */
+}
+
+.carousel-caption p.text-light::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2); /* Even more subtle dark backdrop */
+    border-radius: 0.1rem; /* Optional: slight rounding */
+    padding: 0.05rem 0.1rem; /* Adjust to fit text size */
+    z-index: -1; /* Place behind the text */
+}
+
+/* Ensure the main caption container is transparent */
+.carousel-caption {
+    background-color: transparent !important;
+    padding: 1rem;
+    border-radius: 0 !important;
+}
+
+/* Oxide Red Theme */
+.oxide-red-bg {
+    background-color: #803737 !important;
+}
+
+.oxide-red-text {
+    color: #803737 !important;
+}
+
+.card-interactive:hover,
+.card-interactive:focus {
+    border-bottom-color: #803737 !important; /* Oxide Red for hover/focus border */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15), 0 0 0 0.2rem rgba(128, 55, 55, 0.5) !important; /* Oxide Red focus ring */
+}
+
+.card-interactive .card-body h3 {
+    color: #333; /* Default to dark, overridden by oxide-red-text class in HTML */
+}
+
+.card-interactive:hover .card-body h3,
+.card-interactive:focus .card-body h3 {
+    color: #662828 !important; /* Darker Oxide Red on hover/focus */
+}
+
+.card-interactive .card-body i {
+    color: #803737 !important; /* Oxide Red for icons */
 }

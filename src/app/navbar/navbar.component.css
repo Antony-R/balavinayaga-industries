@@ -1,111 +1,148 @@
-.navbar-brand{
-    font-family: 'Metropolis', sans-serif;
-    font-size:  2em;
-    margin: 0.5rem;
-    color: #fff;
+/* navbar.component.css */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.flexbox-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem;
+.bg-primary {
+    background-color: #803737 !important;
 }
 
-.navbar-flex-links ul{
-    display: flex;
-    margin: 0;
-    padding: 0;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
-.navbar-flex-links li{
-    list-style: none;
-    border: 2px solid transparent;
-}
-
-.navbar-flex-links li a{
-    color: #fff;
+.navbar-brand {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 1.75em;
+    font-weight: bolder;
+    color: #fff !important;
     text-decoration: none;
-    font-family: 'Metropolis-Reg', sans-serif;
-    font-size: 1.1em;
-    padding: 0.9rem;
-    display: block;
 }
 
-.navbar-flex-links li:hover{
-    border-color:#fff;
+.brand-name-style {
+    letter-spacing: 0.05em;
 }
 
-.navbar-toggle-btn{
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
+.navbar-toggler {
+    background-color: transparent;
+    border: none;
     cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    display: none; /* Hidden on desktop */
 }
 
-.navbar-toggle-btn .bar{
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border: 10px;
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
 }
 
+.navbar-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    display: flex; /* This ensures horizontal arrangement */
+    flex-direction: row; /* Explicitly set to row for horizontal layout */
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.nav-item {
+    margin-left: 1rem;
+}
+
+.nav-link {
+    color: #fff !important;
+    text-decoration: none;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 1.1em;
+    padding: 0.75rem 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #f0f0f0 !important;
+}
+
+.nav-link.active-link {
+    font-weight: 500;
+    border-bottom: 2px solid #fff;
+}
+
+/* Mobile Styles */
 @media (max-width: 770px) {
-    .navbar-toggle-btn{
-        display: flex;
+    .navbar-toggler {
+        display: block; /* Show on mobile */
     }
 
-    .navbar-flex-links{
+    .navbar-links {
         margin-top: 5px;
         display: none;
         width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
-    .navbar-brand{
+    .navbar-links.active {
+        display: flex;
+        flex-direction: column; /* Stack items on mobile */
+        align-items: center;
+    }
+
+    .navbar-nav {
+        display: flex; /* Ensure flexbox is used on mobile too */
+        flex-direction: column; /* Stack items vertically on mobile */
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .nav-item {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+    }
+
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        padding: 0.75rem;
+        display: block;
+        text-align: center;
+    }
+
+    .navbar-brand {
         font-size: 1.5em;
     }
 
-    .flexbox-container{
+    .flexbox-container {
         flex-direction: column;
         align-items: flex-start;
     }
-
-    .navbar-flex-links ul{
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .navbar-flex-links li{
-        text-align: center;
-    }
-    .navbar-flex-links li a{
-        padding: .5rem 1rem;
-    }
-
-    .navbar-flex-links.active{
-        display: flex;
-    }
 }
 
-@media (max-width: 500px){
-    .navbar-brand{
+@media (max-width: 500px) {
+    .navbar-brand {
         font-size: 1.2em;
-    }
-}
-
-@media (max-width: 400px){
-    .navbar-brand{
-        font-size: 1.07em;
-    }
-}
-
-@media (max-width: 361px){
-    .navbar-brand{
-        font-size: 1em;
     }
 }

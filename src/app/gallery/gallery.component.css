@@ -1,14 +1,117 @@
+.row.align-items-center.justify-content-center.mt-5 {
+    margin-top: 4rem !important;
+}
+
+#carouselExampleCaptions {
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.carousel-inner {
+    border-radius: 0.5rem;
+}
+
+.carousel-item {
+    position: relative; /* Needed for absolute positioning of the caption */
+}
+
 .carousel-item img {
-    height: 70vh;
+    height: 78vh;
+    object-fit: fill;
 }
 
-.carousel-caption{
-    font-family: 'Provicali', sans-serif;
+.carousel-caption {
+    position: absolute; /* Position at the bottom-left */
+    bottom: 1%; /* Adjust vertical distance from the bottom */
+    left: 1%; /* Adjust horizontal distance from the left */
+    width: auto; /* Only take up the width of the text */
+    padding: 0.5rem 0.75rem; /* Minimal padding */
+    background-color: transparent; /* Remove the background */
+    color: #eee; /* Light color for better visibility on dark images */
+    text-align: left; /* Align text to the left */
+    z-index: 10; /* Ensure text is above other elements */
 }
 
-h5{
-    background-color: #000000;
-    width: fit-content;
-    margin: auto;
-    padding: 5px 10px 5px 10px;
+.carousel-caption h5 {
+    background-color: transparent;
+    margin: 0; /* Remove default margins */
+    padding: 0;
+    color: #eee; /* Inherit or set text color */
+    font-size: 1rem; /* Smaller font size for credit style */
+    font-weight: 700; /* Slightly bold */
+    letter-spacing: 0.01rem;
+    line-height: 1.2;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Add a subtle text shadow for better contrast */
+    font-family: 'Poppins', sans-serif;
+}
+
+.carousel-indicators {
+    bottom: 1%;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin: 0 0.15rem;
+    opacity: 0.7;
+}
+
+.carousel-indicators .active {
+    background-color: #803737 !important; /* Oxide Red for active indicator */
+    opacity: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background for better visibility */
+    border-radius: 50%;
+    padding: 0.6rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 55vh;
+    }
+    .carousel-caption {
+        bottom: 1%;
+        left: 1%;
+        padding: 0.4rem 0.6rem;
+    }
+    .carousel-caption h5 {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item img {
+        height: 45vh;
+    }
+    .carousel-caption {
+        bottom: 1%;
+        left: 1%;
+        padding: 0.3rem 0.5rem;
+    }
+    .carousel-caption h5 {
+        font-size: 0.7rem;
+    }
+}
+
+/* Oxide Red Theme */
+.oxide-red-bg {
+    background-color: #803737 !important;
 }

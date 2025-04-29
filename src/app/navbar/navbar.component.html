@@ -1,24 +1,29 @@
-<nav class="bg-primary">
-  <div class="flexbox-container">
-    <div>
-      <a class="navbar-brand" routerLink='' id="brand-name">
-        <img src="./assets/brand-logo-svg.svg" id="img" alt="Logo" width="50" height="44"
-          class="d-inline-block img-thumbnail">
-        BALAVINAYAGA INDUSTRIES
-      </a>
-    </div>
-    <a class="navbar-toggle-btn" (click)="toggle()">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </a>
-    <div class="navbar-flex-links" [class.active]="hamburger">
-      <ul>
-        <li><a routerLink=''>Home</a></li>
-        <li> <a routerLink='/gallery'>Gallery</a></li>
-        <li> <a routerLink='/services'>Services</a></li>
-        <li><a routerLink='/contact-us'>Contact Us</a></li>
-      </ul>
-    </div>
+<nav class="bg-primary shadow-sm">
+  <div class="container d-flex justify-content-between align-items-center py-3">
+    <a class="navbar-brand d-flex align-items-center text-white fw-semibold" routerLink=''>
+      <img src="./assets/bvi-logo-white.svg" id="img" alt="Logo" width="50" height="44"
+          class="d-inline-block align-middle me-2 pb-2">
+      <span class="brand-name-style align-middle">BALAVINAYAGA INDUSTRIES</span>
+  </a>
+      <button class="navbar-toggler border-0" type="button" (click)="toggle()">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-links" [class.active]="hamburger">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link text-white" routerLink='' routerLinkActive="active-link"
+                      [routerLinkActiveOptions]="{ exact: true }">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-white" routerLink='/gallery' routerLinkActive="active-link">Gallery</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-white" routerLink='/services' routerLinkActive="active-link">Services</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-white" routerLink='/contact-us' routerLinkActive="active-link">Contact Us</a>
+              </li>
+          </ul>
+      </div>
   </div>
 </nav>

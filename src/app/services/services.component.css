@@ -1,39 +1,162 @@
-.custom-font {
-    font-family: 'Raleway', sans-serif;
+/* services.component.css */
+
+/* Using a more distinctive and readable font */
+body {
+    font-family: 'Merriweather', serif;
+    line-height: 1.6;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.gotham{
+.container.my-3 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Compact button group */
+.btn-group.d-flex.justify-content-center.custom-font {
+    margin-bottom: 1.5rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: inline-flex; /* Use inline-flex to better control button boundaries */
+}
+
+.btn-group > .btn-check + .btn-outline-danger {
+    background-color: #fff;
+    color: #555;
+    border: 1px solid #ddd;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.2s ease-in-out;
+    outline: none !important; /* Important: Remove the default browser focus outline */
+    box-shadow: none; /* Explicitly remove box-shadow by default */
+}
+
+/* Remove borders between adjacent buttons */
+.btn-group > .btn-check + .btn-outline-danger + .btn-check + .btn-outline-danger {
+    border-left-width: 0;
+}
+
+/* Style the first button to have the left rounded corners */
+.btn-group > .btn-check:first-child + .btn-outline-danger {
+    border-top-left-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+}
+
+/* Style the last button to have the right rounded corners */
+.btn-group > .btn-check:last-child + .btn-outline-danger {
+    border-top-right-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+}
+
+.btn-group > .btn-check:checked + .btn-outline-danger,
+.btn-group > .btn-check + .btn-outline-danger:hover {
+    background-color: #803737; /* Oxide Red */
+    color: #fff;
+    border-color: #803737; /* Oxide Red */
+    z-index: 1; /* Bring active/hovered button to the front */
+    box-shadow: none; /* Ensure no focus ring on hover either */
+}
+
+.btn-group > .btn-check:focus + .btn-outline-danger {
+    box-shadow: 0 0 0 0.2rem rgba(128, 55, 55, 0.25); /* Oxide Red focus ring */
+    z-index: 2; /* Ensure focus ring is on top */
+}
+
+/* Slightly bigger equal sized image grid */
+.col-12.d-flex.justify-content-between.my-3.img-flex {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.img-flex > img.img-fluid.rounded.responsive {
+    width: 280px; /* Increased width for slightly bigger images */
+    height: 190px; /* Increased height for slightly bigger images */
+    object-fit: cover;
+    border-radius: 0.2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0.5rem;
+}
+
+/* Full width list group */
+.col-12.d-flex.justify-content-center.my-3.gotham {
+    margin-bottom: 1.5rem;
+}
+
+.list-group {
+    width: 100%; /* Full width within its parent */
+    border-radius: 0.2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item {
     font-family: 'Lexend', sans-serif;
-    font-size: 1.2em;
+    font-size: 0.9rem;
+    color: #444;
+    border: 1px solid #eee;
+    padding: 0.75rem 1rem;
 }
 
-img{
-    width: 300px;
-    height: 200px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.list-group-item:first-child {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: 600;
+    border-bottom-color: #ddd;
 }
 
-ul{
-    width: 100vw;
+.list-group-item.active {
+    background-color: #803737 !important; /* Oxide Red */
+    color: #fff !important;
+    border-color: #803737 !important; /* Oxide Red */
 }
 
- @media screen and (max-width:1024px) {
-    .img-flex{
-        flex-direction: column;
-        align-items: center;
-    }
-    img.responsive{
-        margin: 10px;
-    }
+/* Compact alert */
+.alert.alert-primary.gotham {
+    font-family: 'Lexend', sans-serif;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #803737; /* Oxide Red */
+    border-color: #662828; /* Darker Oxide Red for border */
+    border-radius: 0.2rem;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-/*
-@media screen and (min-width:1025px) {
-    img.responsive {
-        width: 300px;
-    }
+/* Oxide Red Theme Classes */
+.oxide-red-outline {
+    color: #803737 !important;
+    border-color: #803737 !important;
 }
 
-img.responsive {
-    height: auto;
-} */
+.oxide-red-outline:hover,
+.oxide-red-outline:focus,
+.oxide-red-outline:active,
+.btn-check:checked + .oxide-red-outline {
+    background-color: #803737 !important;
+    color: #fff !important;
+    border-color: #803737 !important;
+    box-shadow: none !important; /* Ensure no focus/active shadow from this class */
+}
+
+.oxide-red-bg {
+    background-color: #803737 !important;
+}
+
+.oxide-red-text-light {
+    color: #fff !important;
+}
+
+.oxide-red-alert {
+    background-color: #f8d7da !important; /* Light red for alert background */
+    color: #721c24 !important; /* Dark red for alert text */
+    border-color: #f5c6cb !important; /* Light red border */
+}
